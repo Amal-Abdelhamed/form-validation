@@ -10,7 +10,7 @@
    background-color: white;
  }
  form{
-   position: relative;
+   /* position: relative; */
  }
  textarea{
    resize: none;
@@ -58,3 +58,10 @@ input.invalid {
 #showPass:hover{
   cursor: pointer;
 }
+/* #checked{
+  font-size: 200px;
+  color: rgba(36, 128, 0, 0.39);
+  position: relative;
+  top: 100%;
+  left:  100%;
+} */

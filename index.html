@@ -13,7 +13,7 @@
   <body>
     <div class="container h-100">
       <div class="row h-100 justify-content-center align-items-center">
-        <form method="get"id="myForm" name="myForm" onsubmit="return fSubmit()" class="col-md-8 px-4 pt-md-5 pb-md-2" >
+        <form method="get"id="myForm" name="myForm" class="col-md-8 px-4 pt-md-5 pb-md-2" onsubmit="return validateInputs()">
           <h6 class="title">Form Application</h6>
           <div class="row">
             <div class="form-group col-12 col-md-6">
@@ -22,7 +22,7 @@
                 type="text"
                 class="form-control"
                 placeholder="First name"
-                required
+                 
                 
               />
               <p id="fNameError" class="errorMessage d-none">
@@ -36,7 +36,7 @@
                 class="form-control"
                 placeholder="Last name"
                 disabled
-                required
+                 
               />
               <p id="lNameError" class="errorMessage d-none">
                 last name must have minimum 2 characters
@@ -50,7 +50,7 @@
                 type="password"
                 class="form-control pl-5"
                 placeholder="Password"
-                required
+                 
               /><i class="fa-regular fa-eye" id="showPass" onclick="show()"></i>
               <p id="passError" class="errorMessage d-none"></p>
             </div>
@@ -75,7 +75,7 @@
                 class="form-control"
                 placeholder="Age"
                 min="0"
-                required
+                 
               />
               <p id="ageError" class="errorMessage d-none">
                 you age must be greater than 18
@@ -86,7 +86,7 @@
               name="country"
                 class="form-control"
                 id="exampleFormControlSelect1"
-                required
+                 
                 onchange="checkCountry()"
               >
                 <option value="-1" class="text-center">-- select a country --</option>
@@ -136,14 +136,15 @@
           </div>
           <div class="row">
             <div class="form-group col-12 col-md-6">
-              <input type="submit"  value="Submit" class="btn btn-secondary w-100" >
+              <input type="submit" value="Submit" id="submit" class="btn btn-secondary w-100" >
               </input>
             </div>
             <div class="form-group col-12 col-md-6">
-              <input type="reset" value="Reset" class="btn btn-secondary w-100" onclick="clearErrorMsgs()">
+              <input type="reset" value="Reset" class="btn btn-secondary w-100" onclick="clearErrorMsgs() ,emptyMsg()">
               </input>
             </div>
           </div>
+          <!-- <i id="checked" class="fa-solid fa-circle-check"></i> -->
         </form>
       </div>
     </div>
