@@ -1,6 +1,7 @@
 
  body{
    height: 100vh;
+   padding: 30px;
  }
  .title{
    position: absolute;
